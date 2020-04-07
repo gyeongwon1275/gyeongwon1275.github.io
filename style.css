@@ -1,0 +1,58 @@
+#title{
+
+    background-color: #404040;
+    border: 15px ;
+    padding: 10px ;
+    margin: 20px ;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+#title_color {
+
+    color: whitesmoke;
+}
+
+#job_description {
+
+
+    text-align: center;
+}
+
+
+.box_content{
+
+    position: relative;
+    top: 60px;
+   width: 700px;
+    height: fit-content;
+    border: 15px ;
+    padding: 10px ;
+    margin: 20px ;
+    background-color: grey;
+    color: ivory;
+    font-size: 30px;
+    
+}
+
+.list {
+
+
+    margin: 30px;
+    color: ivory;
+    font-size: 20px;
+
+}
+
+#iconimage {
+
+width: 500px;
+height: 500px;
+
+position: absolute;
+
+top: 400px;
+right: 200px;
+
+}
