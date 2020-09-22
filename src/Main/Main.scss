@@ -1,0 +1,27 @@
+.main-text-container {
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30vh;
+  font-family: 'yg-jalnan';
+
+  h1 {
+    font-size: 70px;
+    letter-spacing: -2px;
+    padding-bottom: 18px;
+  }
+  h3 {
+    line-height: 40px;
+  }
+
+  .social-icon-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    i {
+      font-size: 50px;
+      padding-left: 30px;
+    }
+  }
+}
