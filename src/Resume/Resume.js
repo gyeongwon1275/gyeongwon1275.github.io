@@ -1,7 +1,10 @@
 import React from 'react'
 import './Resume.scss'
-function Resume(props) {
-  return <div></div>
+function Resume() {
+  return <div className='resume-container'>
+
+
+  </div>
 }
 
 export default Resume

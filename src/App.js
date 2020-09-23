@@ -6,9 +6,14 @@ import Project from './Project/Project'
 import Skills from './Skills/Skills'
 
 function App() {
+  const [Navvalue, setValue] = React.useState(0)
+
+  function handleChange(event, newValue) {
+    setValue(newValue)
+  }
   return (
     <div className="app">
-      <Nav />
+      <Nav Navvalue={Navvalue} handleChange={handleChange} />
       <Main />
       <Skills />
       <Project />

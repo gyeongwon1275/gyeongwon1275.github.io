@@ -5,28 +5,28 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import { makeStyles } from '@material-ui/core'
 
-function Nav() {
+function Nav({ Navvalue, handleChange }) {
   const useStyles = makeStyles((theme) => ({
     appbar: {
       backgroundColor: theme.palette.background.paper,
     },
   }))
 
-  const colors = useStyles()
+  function handleScroll(seletor) {
+    var location = document.querySelector(`.${seletor}`).offsetTop
 
-  const [value, setValue] = React.useState(0)
-
-  function handleChange(event, newValue) {
-    setValue(newValue)
+    window.scrollTo({ top: location, left: 0, behavior: 'smooth' })
   }
+  const colors = useStyles()
 
   return (
     <AppBar className={colors.appbar}>
-      <Tabs value={value} onChange={handleChange}>
-        <Tab label="MAIN" />
-        <Tab label="SKILLS" />
+      <Tabs value={Navvalue} onChange={handleChange}>
+        <Tab label="MAIN" onClick={() => handleScroll('main-text-container')} />
+        <Tab label="SKILLS" onClick={() => handleScroll('skills-container')} />
+        <Tab label="WORKS" onClick={() => handleScroll('project-container')} />
         <Tab label="RESUME" />
-        <Tab label="WORKS" />
+
         <Tab label="CONTACT" />
       </Tabs>
     </AppBar>
