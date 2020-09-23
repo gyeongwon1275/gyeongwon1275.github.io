@@ -1,23 +1,32 @@
 .skills-container {
   height: 93vh;
-  // margin-top: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 15vh;
-
+  padding-top: 10vh;
   h2 {
     font-size: 50px;
     padding-bottom: 10px;
   }
-  h4 {
+  h2::after {
+    content: '';
+    border-bottom: 4px solid #64b5f6;
+    width: 105px;
+    display: block;
+  }
+
+  h3 {
     font-size: 30px;
-    padding-top: 20px;
     padding-bottom: 20px;
   }
   img {
     width: 140px;
     height: 140px;
     margin-right: 20px;
+  }
+
+  .skills-wrapper {
+    padding-bottom: 20px;
   }
 }

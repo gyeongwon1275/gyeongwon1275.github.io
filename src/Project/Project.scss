@@ -1,11 +1,12 @@
 .project-container {
-  height: 93vh;
-
+  height: auto;
   padding-top: 10vh;
   margin-left: 15vh;
-  h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
+  h2::after {
+    content: '';
+    border-bottom: 4px solid #64b5f6;
+    width: 200px;
+    display: block;
   }
 }
 .project-wrapper {

@@ -1,13 +1,20 @@
 .education-container {
   margin-left: 15vh;
-  margin-top: 80vh;
-  height: 80vh;
+  padding-top: 5vh;
+  height: 93vh;
+
+  h2::after {
+    content: '';
+    border-bottom: 4px solid #64b5f6;
+    width: 105px;
+    display: block;
+  }
 }
 .education-wrapper {
   display: flex;
-  padding-top: 30px;
+  margin-bottom: 20px;
   .date-wrapper {
-    margin-right: 60px;
+    margin-right: 50px;
   }
 }
 

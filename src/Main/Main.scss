@@ -23,5 +23,19 @@
       font-size: 50px;
       padding-left: 30px;
     }
+
+    i:hover {
+      color: #64b5f6;
+      transition: 0.3s ease;
+    }
+  }
+
+  .email-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    margin-left: 10px;
   }
 }
