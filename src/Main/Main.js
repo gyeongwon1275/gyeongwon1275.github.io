@@ -8,11 +8,8 @@ function Main() {
   }, [])
   return (
     <div className="main-text-container">
-      <h1> 안녕하세요? 김경원입니다.</h1>
-      <h3>
-        React를 좋아하는 프론트엔드 개발자 김경원입니다.
-        <br />
-      </h3>
+      <h1> 안녕하세요?</h1>
+      <h3>React를 좋아하는 프론트엔드 개발자 김경원입니다.</h3>
 
       <div className="social-icon-container">
         <a

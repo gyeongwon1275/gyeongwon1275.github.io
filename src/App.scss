@@ -17,6 +17,7 @@ body {
   background-color: #121212;
   color: #fff;
   font-family: 'yg-jalnan';
+  white-space: pre;
 }
 a {
   text-decoration: none;
@@ -41,4 +42,9 @@ button {
 h2 {
   font-size: 50px;
   margin-bottom: 30px;
+}
+i:hover {
+  color: #64b5f6;
+  transform: scale(1.1);
+  transition: 0.3s ease;
 }

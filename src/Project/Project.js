@@ -1,11 +1,32 @@
 import React from 'react'
 import './Project.scss'
-
+import ProjectCard from './ProjectCard'
+import { bemypet, Otjang } from './ProjectInfo'
 function Project() {
+  /* 
+  TODO
+
+  card 형태로 포트폴리오 표현 
+
+  상단에 프로젝트 이름 
+  중간에 gif 
+  하단에 프로젝트 간단설명 
+  최하단 아이콘은 github, 와 배포 아이콘 
+  */
   return (
     <div className="project-container">
       <h2>프로젝트</h2>
-      <div className="project-wrapper">
+      <div className="card-container">
+        <ProjectCard project={Otjang} />
+        <ProjectCard project={bemypet} />
+      </div>
+    </div>
+  )
+}
+
+export default Project
+/* 
+   <div className="project-wrapper">
         <div className="project-description-wrapper">
           <h3>Otjang</h3>
           <h4>
@@ -25,6 +46,7 @@ function Project() {
               'Stack : react-native / redux / redux-thunk / aws-sdk / react-navigation / react-hooks / victory-native'
             }
           </h4>
+          
           <ul>
             <li>{'1. 옷 데이터 CRUD 기능, UI 구현'}</li>
             <li>{'2. Redux 설계 및 기능구현, Redux-thunk 로 서버와 연결'}</li>
@@ -70,8 +92,4 @@ function Project() {
           </ul>
         </div>
       </div>
-    </div>
-  )
-}
-
-export default Project
+*/
