@@ -18,7 +18,7 @@ function Project() {
             rel="noopener noreferrer"
             href="https://bit.ly/3hMoxEE"
           >
-            <i class="fab fa-github" />
+            <i className="fab fa-github" />
           </a>
           <h4>
             {
@@ -46,7 +46,7 @@ function Project() {
             rel="noopener noreferrer"
             href="https://bit.ly/2ZZVQhk"
           >
-            <i class="fab fa-github" />
+            <i className="fab fa-github" />
           </a>
 
           <a
@@ -54,7 +54,7 @@ function Project() {
             rel="noopener noreferrer"
             href="https://bit.ly/33R05wL"
           >
-            <i class="fas fa-globe" />
+            <i className="fas fa-globe" />
           </a>
 
           <h4>

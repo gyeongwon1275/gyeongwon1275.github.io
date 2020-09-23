@@ -1,18 +1,16 @@
 .project-container {
   height: 93vh;
-  margin-top: 35vh;
+
   padding-top: 10vh;
-  margin: 0 auto;
+  margin-left: 15vh;
   h2 {
     font-size: 40px;
-    padding-left: 40px;
     margin-bottom: 20px;
   }
 }
 .project-wrapper {
-  padding-bottom: 100px;
+  margin-bottom: 100px;
   .project-description-wrapper {
-    padding-left: 40px;
     h3 {
       font-size: 30px;
       margin-bottom: 20px;
@@ -27,7 +25,7 @@
       margin-top: 20px;
     }
     li {
-      padding-bottom: 15px;
+      margin-bottom: 15px;
     }
   }
 }

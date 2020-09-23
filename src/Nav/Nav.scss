@@ -1,6 +1,13 @@
 .MuiTabs-flexContainer {
   display: flex;
   justify-content: center;
+  button {
+    letter-spacing: 3px;
+    font-family: 'yg-jalnan';
+  }
+  .Mui-selected {
+    font-weight: bold;
+  }
 }
 
 header {

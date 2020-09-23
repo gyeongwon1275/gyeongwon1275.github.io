@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import './Nav.scss'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
@@ -12,28 +12,36 @@ function Nav() {
     setValue(newValue)
   }
 
-  let appBar = useRef(null)
   useEffect(() => {
+    const getScrollPosition = () => {
+      var topLocations = [
+        document.querySelector(`.main-text-container`).offsetTop,
+        document.querySelector(`.skills-container`).offsetTop,
+        document.querySelector(`.project-container`).offsetTop,
+        document.querySelector(`.education-container`).offsetTop,
+      ]
+
+      if (window.scrollY < topLocations[1] * 0.8) {
+        setValue(0)
+      }
+      if (
+        window.scrollY < topLocations[2] * 0.8 &&
+        window.scrollY >= topLocations[1] * 0.8
+      ) {
+        setValue(1)
+      }
+      if (
+        window.scrollY >= topLocations[2] * 0.8 &&
+        window.scrollY < topLocations[3] * 0.9
+      ) {
+        setValue(2)
+      }
+      if (window.scrollY >= topLocations[3] * 0.9) {
+        setValue(3)
+      }
+    }
     window.addEventListener('scroll', getScrollPosition, true)
   }, [])
-
-  function getScrollPosition() {
-    var locations = [
-      document.querySelector(`.main-text-container`).offsetTop,
-      document.querySelector(`.skills-container`).offsetTop,
-      document.querySelector(`.project-container`).offsetTop,
-    ]
-    if (window.scrollY < locations[1] && window.scrollY >= locations[0]) {
-      setValue(0)
-    }
-    if (window.scrollY < locations[2] && window.scrollY >= locations[1] * 0.8) {
-      setValue(1)
-    }
-    if (window.scrollY >= locations[2] * 0.8) {
-      setValue(2)
-    }
-    //
-  }
 
   // TODO
   /* 스크롤 할때마다 
@@ -44,34 +52,26 @@ function Nav() {
     appbar: {
       backgroundColor: theme.palette.background.paper,
     },
+    indicatorColor: theme.palette.primary.dark,
   }))
 
-  function handleScroll(seletor) {
-    var location = document.querySelector(`.${seletor}`).offsetTop
+  const handleScroll = useCallback(
+    (seletor) => () => {
+      var location = document.querySelector(`.${seletor}`).offsetTop
 
-    window.scrollTo({ top: location, left: 0, behavior: 'smooth' })
-  }
+      window.scrollTo({ top: location, left: 0, behavior: 'smooth' })
+    },
+    []
+  )
   const colors = useStyles()
 
   return (
     <AppBar className={colors.appbar}>
-      <Tabs value={value} ref={appBar} onChange={handleChange}>
-        <Tab
-          label="MAIN"
-          onClick={() => {
-            handleScroll('main-text-container')
-          }}
-        />
-        <Tab
-          label="SKILLS"
-          onClick={() => {
-            handleScroll('skills-container')
-          }}
-        />
-        <Tab label="WORKS" onClick={() => handleScroll('project-container')} />
-        <Tab label="RESUME" />
-
-        <Tab label="CONTACT" />
+      <Tabs value={value} onChange={handleChange}>
+        <Tab label="MAIN" onClick={handleScroll('main-text-container')} />
+        <Tab label="SKILLS" onClick={handleScroll('skills-container')} />
+        <Tab label="WORKS" onClick={handleScroll('project-container')} />
+        <Tab label="EDUCATION" onClick={handleScroll('education-container')} />
       </Tabs>
     </AppBar>
   )

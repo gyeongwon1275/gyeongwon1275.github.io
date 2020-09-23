@@ -1,0 +1,19 @@
+.education-container {
+  margin-left: 15vh;
+  margin-top: 80vh;
+  height: 80vh;
+}
+.education-wrapper {
+  display: flex;
+  padding-top: 30px;
+  .date-wrapper {
+    margin-right: 60px;
+  }
+}
+
+.education-info-wrapper {
+  h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
