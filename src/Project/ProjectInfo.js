@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Otjang = {
   title: 'Otjang',
   info: `[ 의류관리 react-native App ]`,
