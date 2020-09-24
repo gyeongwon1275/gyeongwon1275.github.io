@@ -2,9 +2,8 @@
   height: 93vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 30vh;
-  font-family: 'yg-jalnan';
 
   h1 {
     font-size: 70px;
@@ -12,22 +11,16 @@
     padding-bottom: 18px;
   }
   h3 {
-    line-height: 40px;
+    line-height: 30px;
   }
 
   .social-icon-container {
     display: flex;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 30px;
     i {
       font-size: 50px;
       padding-left: 30px;
-    }
-
-    i:hover {
-      color: #64b5f6;
-      transform: scale(1.1);
-      transition: 0.3s ease;
     }
   }
 
